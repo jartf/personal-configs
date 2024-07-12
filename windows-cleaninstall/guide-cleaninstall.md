@@ -53,7 +53,7 @@ Disconnect internet from your PC (including all ethernet cables or USB tethering
 Now, restart your computer and boot from the USB drive using the BIOS menu.
 
 ✱ At this point, if you encounter a “Security Violation” Secure Boot error, like so, then enroll the key:
-![secureboot error](image-2.png)
+![secureboot error](securebooterror.png)
 
 At the Ventoy boot menu, select the Windows ISO using the arrow keys, press Enter, click Boot in normal mode, and press Enter again. Follow [Microsoft's reinstallation guide](https://support.microsoft.com/en-us/windows/reinstall-windows-d8369486-3e33-7d9c-dccc-859e2b022fc7#ID0EDBBBBBBBDBD) from step 4 (clicking Install now) onwards.
 
