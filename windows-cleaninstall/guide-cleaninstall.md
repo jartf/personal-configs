@@ -44,6 +44,7 @@ Windows might not automatically install your network drivers during a clean inst
 
 Download the latest release of Ventoy [from here](https://github.com/ventoy/Ventoy/releases) and extract it wherever you feel comfortable. Assuming you are using Windows, run Ventoy2Disk.exe in the folder. Otherwise, [follow this guide](https://www.ventoy.net/en/doc_start.html).
 ![ventoy2disk](ventoy2disk.png)
+
 In the opened window, select your USB drive and click Install and wait until it's done. Copy the downloaded ISO file into the USB drive (now labeled Ventoy).
 
 ## Reinstall Windows
