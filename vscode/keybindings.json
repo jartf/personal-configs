@@ -1,0 +1,94 @@
+[
+    /** Panels **/
+    {
+        "key": "ctrl+k ctrl+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+k ctrl+g",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "ctrl+k ctrl+d",
+        "command": "workbench.view.debug"
+    },
+    {
+        "key": "ctrl+k ctrl+x",
+        "command": "workbench.extensions.action.showEnabledExtensions"
+    },
+    {
+        "key": "ctrl+k ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+
+    /** Fold **/
+    {
+        "key": "shift+ctrl+[",
+        "command": "editor.fold",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+ctrl+]",
+        "command": "editor.unfold",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+ctrl+\\",
+        "command": "editor.foldAll",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+ctrl+/",
+        "command": "editor.unfoldAll",
+        "when": "editorFocus"
+    },
+
+    /** Line manipulation **/
+    // Duplicate line
+    {
+        "key": "ctrl+l",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus"
+    },
+    // Move line up
+    {
+        "key": "shift+alt+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus"
+    },
+    // Join lines
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.joinLines",
+        "when": "editorTextFocus"
+    },
+
+    /** Switch between windows **/
+    {
+        "key": "ctrl+;",
+        "command": "workbench.action.switchWindow",
+        "when": "! config.simple-project-switcher.present"
+    },
+    {
+        "key": "alt+ctrl+right",
+        "command": "workbench.action.showNextWindowTab"
+    },
+    {
+        "key": "alt+ctrl+left",
+        "command": "workbench.action.showPreviousWindowTab"
+    },
+
+    /** Open DevTools **/
+    {
+        "key": "alt+ctrl+i",
+        "command": "workbench.action.toggleDevTools"
+    },
+]

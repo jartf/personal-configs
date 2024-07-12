@@ -1,0 +1,146 @@
+{
+/** Appearance **/
+  "editor.fontSize": 15,
+  "editor.lineHeight": 20,
+  "window.titleBarStyle": "custom", // Custom title bar so GNOME doesn't waste my precious space
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1.15,
+  "workbench.colorTheme": "Best Themes - Midnight City",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace', monospace",
+
+/** Better defaults **/
+  "files.trimFinalNewlines": true,            // Trim final newlines
+  "files.insertFinalNewline": true,           // Insert final newline
+  "editor.detectIndentation": false,          // Detect indentation
+  "editor.snippetSuggestions": "top",         // Show snippets on top
+  "files.autoSave": "onWindowChange",         // Auto save on window change
+  "files.trimTrailingWhitespace": true,       // Trim trailing whitespace
+  "diffEditor.renderSideBySide": false,       // No side by side diff editor
+  "window.newWindowDimensions": "inherit",    // New window dimensions
+  "editor.multiCursorModifier": "ctrlCmd",    // Multicursor modifier
+  "editor.emptySelectionClipboard": false,    // Copy line without selecting
+  "diffEditor.ignoreTrimWhitespace": false,   // Ignore trim whitespace in diff editor
+  "editor.copyWithSyntaxHighlighting": false, // Copy with syntax highlighting
+
+/** Editor enhancements **/
+  "editor.wordWrap": "on",                    // Word wrap
+  "editor.suggestSelection": "first",         // Suggest first
+  "editor.largeFileOptimizations": false,     // Disable large file optimizations
+  // Enable quick suggestions only outside of strings and comments
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+  // Hide some UI elements
+    "editor.minimap.enabled": false,          // Hide minimap
+    "workbench.sideBar.location": "right",    // Move sidebar to right
+    "workbench.editor.showTabs": "multiple",  // Tabs (will change to "off" later)
+  /** Unchanged since I still like these for now
+    "workbench.statusBar.visible": false,     // Hide status bar
+    "workbench.activityBar.location": "hidden",   // Hide activity bar **/
+  // VSCode has too much noise
+    "breadcrumbs.enabled": false,             // Hide breadcrumbs
+    "scm.diffDecorations": "none",            // Hide diff decorations
+    "editor.matchBrackets": "near",           // Highlight only near matching brackets
+    "workbench.tips.enabled": false,          // Hide tips
+    "editor.colorDecorators": false,          // Hide color decorators
+    "git.decorations.enabled": false,         // Hide git decorations
+    "workbench.startupEditor": "none",        // Hide startup editor
+    "editor.selectionHighlight": false,       // Hide selection highlight
+    "editor.overviewRulerBorder": false,      // Hide overview ruler border
+    "editor.lightbulb.enabled": "onCode",     // Hide lightbulb
+    "editor.renderLineHighlight": "none",     // Hide line highlight
+    "editor.occurrencesHighlight": "off",     // Hide occurrences highlight
+    "problems.decorations.enabled": false,    // Hide problems decorations
+    "workbench.editor.enablePreview": false,  // Disable preview
+    "editor.renderControlCharacters": false,  // Hide control characters
+    "editor.hideCursorInOverviewRuler": true, // Hide cursor in overview ruler
+    "editor.gotoLocation.multipleReferences": "goto",       // Goto multiple references
+    "editor.gotoLocation.multipleDefinitions": "goto",      // Goto multiple definitions
+    "editor.gotoLocation.multipleDeclarations": "goto",     // Goto multiple declarations
+    "workbench.editor.enablePreviewFromQuickOpen": false,   // Disable preview from quick open
+    "editor.gotoLocation.multipleImplementations": "goto",  // Goto multiple implementations
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",  // Goto multiple type definitions
+
+/** Privacy **/
+  "update.mode": "manual",                    // Manual updates
+  "telemetry.telemetryLevel": "off",          // Disable telemetry
+  "code-runner.enableAppInsights": false,     // Disable code runner telemetry
+  "extensions.ignoreRecommendations": true,   // Ignore extension recommendations
+
+/** Search **/
+  "search.useIgnoreFiles": false,     // Don't use ignore files
+  "search.exclude": {
+    // Hide everything in /vendor, except the "laravel" and "livewire" folder.
+      "**/vendor/{[^l],?[^ai]}*": true,
+    // Hide everything in /public, except "index.php"
+      "**/public/{[^i],?[^n]}*": true,
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/_ide_helper.php": true,
+      "**/composer.lock": true,
+      "**/package-lock.json": true,
+      "storage": true,
+      ".phpunit.result.cache": true
+  },
+
+ /** Git **/
+  "git.autofetch": true,              // Enable auto fetch
+  "git.confirmSync": false,           // Disable git sync confirmation
+  "git.enableSmartCommit": true,      // Enable smart commit
+  "git.enableCommitSigning": true,    // Enable commit signing
+
+/** Code **/
+  "editor.tabSize": 2,                // Set tab size to 2
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?", // Include "-" in word selection.
+  "emmet.includeLanguages": {
+    "blade": "html",
+    "vue-html": "html",
+    "vue": "html"
+  },
+  "files.associations": {
+    ".php_cs": "php",
+    ".php_cs.dist": "php"
+  },
+
+/** Language-specific tweaks **/
+  // C/C++
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc", // Compiler path
+  // PHP
+    "php.suggest.basic": false,                   // Disable basic suggestions
+    "[php]": {
+      "editor.defaultFormatter": "junstyle.php-cs-fixer"    // PHP CS Fixer as default formatter
+    },
+    "php-cs-fixer.onsave": true,                  // Auto fix on save
+    "php-cs-fixer.rules": "@PSR2",                // PSR2 rules
+    "php-cs-fixer.autoFixByBracket": false,       // Disable auto fix by bracket
+  // JavaScript
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",  // Prettier as default formatter
+      "editor.formatOnSave": true               // Format on save
+    },
+    "prettier.requireConfig": true,               // Require config
+    "prettier.useEditorConfig": false,            // Disable editor config
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always",           // Fix all ESLint problems
+      "source.fixAll.tslint": "always"            // Fix all TSLint problems
+    },
+    "eslint.workingDirectories": [{ "mode": "auto" }],  // Auto ESLint working directories
+    // ESLint config for import rules
+      "eslint.options": {
+        "rules": {
+          "import/default": "error",
+          "import/export": "error",
+          "import/named": "error",
+          "import/namespace": "error",
+          "import/no-duplicates": "error",
+          "import/no-named-as-default": "error",
+          "import/no-named-as-default-member": "error",
+          "import/no-unresolved": "error"
+        }
+      },
+  // TypeScript
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true  // Self-explanatory name
+}
